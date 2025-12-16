@@ -434,28 +434,7 @@ footer .footer-links .links a{
         cursor: pointer;
         font-size: 12px;
     }
-    .hero{
-        width: 100%;
-        padding-inline: 20px;
-    }
-    .hero h1{
-        font-size: 40px;
-    }
-    .about{
-        margin-left: 0;
-        width: 100%;
-        padding-inline: 20px;
-    }
-    .benefits{
-        grid-template-columns: repeat(1, 1fr);
-        padding-inline: 20px;
-    }
-    .products-container{
-        padding-inline: 10px;
-    }
-    .products-container .products{
-        grid-template-columns: repeat(1, 1fr);
-    }
+    
     .ready{
         padding-inline: 10px;
         text-align: center;

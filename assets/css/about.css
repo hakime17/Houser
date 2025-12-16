@@ -126,18 +126,21 @@ footer .footer-links .links a{
 }
 
 .container{
-    display: flex;
-    margin: 3rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 5fr 5fr ;
+    grid-template-rows:1fr 1f;
+    margin: 2rem;
+    gap: 3rem;
+    border: solid 2px #000;
+    width: 82rem;
+    height: 35rem;
 }
 
 .info{
     border: 2px solid gray ;
     width: 700px;
     height: 250px;
-    text-align: center;
-    
-    
+    margin: 40 0 0 40px ;
 }
 
 .info h1{
@@ -181,6 +184,11 @@ footer .footer-links .links a{
         border: none;
         cursor: pointer;
         font-size: 12px;
+    }
+    
+    .ready{
+        padding-inline: 10px;
+        text-align: center;
     }
     footer{
         width: 100% !important;
