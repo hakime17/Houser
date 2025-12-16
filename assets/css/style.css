@@ -48,7 +48,6 @@ nav button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
     font-size: 20px;
     font-weight: 600;
     gap: 10px;
@@ -83,7 +82,6 @@ nav button{
 
 .features .card {
   background: #ffffff;
-  border-radius: 12px;
   padding: 40px 30px;
   text-align: left;
   display: flex;
@@ -124,7 +122,6 @@ nav button{
   max-width: 800px;
   padding: 40px;
   background: #eef1ff;
-  border-radius: 20px;
   height: 300px;  
 }
 
@@ -141,7 +138,6 @@ nav button{
 button{
     padding: 15px 35px;
     font-size: 1.2rem;
-    border-radius: 10px;
     cursor: pointer;
     display: inline-block;
     margin: auto;
