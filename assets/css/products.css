@@ -80,79 +80,11 @@ header nav i{
     right: 10;
 }
 
-.hero{
-    width: 60%;
-    height: 100%;
-    margin: auto;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero p{
-    font-size: 20px;
-}
-
-.hero h1{
-    font-size: 60px;
-    text-align: center;
-    line-height: 55px;
-    margin-bottom: 20px;
-}
-
-.hero span{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.hero button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: #000;
-    color: #fff;
-}
-
-.about{
-    width: 60%;
-    margin-left: auto;
-    margin-block: 30px;
-    padding-inline: 80px;
-}
-
-.about h2{
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.benefits{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding-inline: 80px;
-    margin-block: 50px;
-}
-
-.benefits .card{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #000;
-    color: #fff;
-    padding: 15px;
-}
-
-.benefits .card i{
-    font-size: 50px;
-    text-align: center;
-}
-
 .products-container {
     width: 100%;
     padding-inline: 80px;
     margin-bottom: 50px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,6 +205,7 @@ header nav i{
 
 .product-details .product {
     width: 50%;
+    margin-inline: 20px;
     background-color: #000;
     color: #fff;
     display: flex; 
@@ -320,33 +253,6 @@ header nav i{
     margin-block: 20px;
     color: black;
     text-decoration: none;
-}
-
-.ready{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.ready h5{
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.ready p{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.ready button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: #000;
-    color: #fff;
 }
 
 footer{
@@ -434,31 +340,14 @@ footer .footer-links .links a{
         cursor: pointer;
         font-size: 12px;
     }
-    .hero{
-        width: 100%;
-        padding-inline: 20px;
-    }
-    .hero h1{
-        font-size: 40px;
-    }
-    .about{
-        margin-left: 0;
-        width: 100%;
-        padding-inline: 20px;
-    }
-    .benefits{
-        grid-template-columns: repeat(1, 1fr);
-        padding-inline: 20px;
-    }
     .products-container{
         padding-inline: 10px;
     }
     .products-container .products{
         grid-template-columns: repeat(1, 1fr);
     }
-    .ready{
-        padding-inline: 10px;
-        text-align: center;
+    .product-details .product {
+        width: 100%;
     }
     footer{
         width: 100% !important;

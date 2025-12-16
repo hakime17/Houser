@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/addproduct.css">
+    <script src="https://kit.fontawesome.com/4b902564ce.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="details">
+            <div class="contact">
+                <span>Call us: +123 456 7890</span>
+                <span>Email: info@houser.com</span>
+                <span>Location: 123 Main St, Anytown</span>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">
+            </div>
+            <ul>
+                <li><a href="/assets/home/index.html">Home</a></li>
+                <li><a href="/assets/about/index.html">About</a></li>
+                <li><a href="/assets/products/index.html">Products</a></li>
+                <li><a href="/assets/wishlist/index.html">Wishlist</a></li>
+                <li><a href="/assets/contact/index.html">Contact & Support</a></li>
+            </ul>
+            <div class="buttons">
+                <button>Make your choice</button>
+                <button>Signout</button>
+                <a href="/assets/addproduct/index.html">
+                    <button>Add Product</button>
+                </a>
+            </div>
+            <i class="fa-solid fa-bars" id="mobile-toggle"></i>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="houser">
+            <h1>Houser</h1>
+            <p>Agentless Real Estate Platform</p>
+        </div>
+        <div class="form-container">
+            <div class="head">
+                <h2>Create New Property Listing</h2>
+                <p>Enter the details for your agentless listing. This information will be displayed to potential buyers immediately.</p>
+            </div>
+            <form action="">
+                <label for="title">
+                    Property Title
+                    <input type="text" id="title" placeholder="e.g., The Willow Creek Estate">
+                </label>
+                <label for="price">
+                    Listing Price (USD)
+                    <input type="text" id="price" placeholder="e.g., 500000">
+                </label>
+                <label for="property">
+                    Property Type
+                    <select name="property" id="property">
+                        <option value="Modern Suburban Home">Modern Suburban Home</option>
+                        <option value="Modern Suburban Home">Urban Loft / Condo</option>
+                        <option value="Modern Suburban Home">Rustin Cabin / Retreat</option>
+                        <option value="Modern Suburban Home">Townhouse</option>
+                        <option value="Modern Suburban Home">Other</option>
+                    </select>
+                </label>
+                <label for="possession">
+                    Listig Status Tag
+                    <select name="possession" id="possession">
+                        <option value="For Sale By Owner">For Sale By Owner</option>
+                        <option value="New Listing">New Listing</option>
+                        <option value="Price Reduction">Price Reduction</option>
+                        <option value="Coming Soon">Coming Soon</option>
+                    </select>
+                </label>
+                <div class="property-details">
+                  <p>Key Property Details</p> 
+                  <div class="flex-input">
+
+                      <label for="beds">
+                          Beds
+                          <input type="number" id="beds" placeholder="4">
+                      </label>
+                      <label for="baths">
+                          Baths
+                          <input type="number" id="baths" placeholder="3">
+                      </label>
+                      <label for="square">
+                          Square Footage
+                          <input type="number" id="square" placeholder="2400">
+                      </label>
+                  </div>
+                </div>
+                <label for="description">
+                    Detailed Description
+                    <textarea rows="10" id="description" placeholder="Quiet neighborhood, new kitchen, and expensive backyard perfect for families."></textarea>
+                </label>
+                <label for="images">
+                    Upload Property Images
+                    <input type="file" id="images">
+                </label>
+            </form>
+            <button type="submit" id="submit">Publish Listing Now</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div class="logo-desc">
+                <div class="logo"></div>
+                <p>The agentless way to find or sell your home. Empowering buyers with direct access and zero commission fees.</p>
+            </div>
+            <div class="links">
+                <span class="head">Quick Links</span>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Wishlist</a>
+            </div>
+            <div class="links">
+                <span class="head">Support & Company</span>
+                <a href="#">Contact & Support</a>
+                <a href="#">FAQ</a>
+                <a href="#">Terms of Services</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="links">
+                <span class="head">Get In Touch</span>
+                <a href="#">Call us: +234 0000000000</a>
+                <a href="#">Email: info@houser.com</a>
+                <a href="#">Location: 123 Main St. Anytown</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 Houser. All rights reserved.</span>
+    </footer>
+</body>
+</html>
