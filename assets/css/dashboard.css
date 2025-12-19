@@ -77,13 +77,14 @@ ul li .number{
     right: 0;
 }
 
-
 ul li a{
     text-decoration: none;
     color: white;
     font-weight: bolder;
     font-size: 20px;
 }
+
+
 
 .container main{
     width: 100%;

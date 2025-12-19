@@ -1,10 +1,10 @@
 
 const toggleButton = document.getElementById('mobile-toggle');
 const navLinksContainer = document.querySelector('header nav ul'); 
-console.log(toggleButton)
 
 // Homepage elements
 const productsContainer = document.querySelector('.products');
+const wishlistsContainer = document.querySelector('.wishlists');
 const allProductsContainer = document.querySelector('#allProductsContainer .products');
 const noProductsMessage = document.getElementById('no-products-message'); 
 
@@ -33,6 +33,9 @@ const submitButton = document.querySelector('#submit');
 const successModal = document.getElementById('success-modal');
 const modalCloseButton = document.getElementById('modal-close');
 
+//wishlist
+const wishListNumber = document.querySelector('.number')
+
 
 // --- Utility Functions for Local Storage ---
 
@@ -54,6 +57,23 @@ function saveInputs(inputs) {
     }
 }
 
+function getWishlist() {
+    try{
+        const wishlistStorage = localStorage.getItem('wishlist');
+        return wishlistStorage ? JSON.parse(wishlistStorage) : [];
+    } catch (e) {
+        console.error('Error adding to the wishlist');
+        return []
+    }
+}
+function saveWishlist(wishlistItems) {
+    try{
+        localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
+    } catch (e) {
+        console.error('Error adding to the wishlist')
+    }
+}
+
 function clearInputs() {
     // Added null checks for safety
     if (title) title.value = '';
@@ -65,6 +85,121 @@ function clearInputs() {
     if (square) square.value = '';
     if (description) description.value = '';
 }
+
+function addToWishList(index) {
+    // 1. Get all your products (the array of 8 objects you showed)
+    const allProducts = getInputs();
+    
+    // 2. Target the specific product clicked using the index
+    const selectedProduct = allProducts[index];
+
+    if (!selectedProduct) {
+        console.error("Product not found at index:", index);
+        return;
+    }
+
+    // 3. Get the CURRENT wishlist from localStorage
+    let currentWishlist = getWishlist();
+
+    // 4. Check if it's already in the wishlist to prevent duplicates
+    const isDuplicate = currentWishlist.some(item => 
+        item.title === selectedProduct.title && item.price === selectedProduct.price
+    );
+
+    if (isDuplicate) {
+        console.log("Item already in wishlist");
+        return; 
+    }
+
+    // 5. Add the new product object to the wishlist array
+    currentWishlist.push(selectedProduct);
+
+    // 6. SAVE the updated array back to localStorage (The missing step!)
+    saveWishlist(currentWishlist);
+
+    // 7. Update the UI
+    renderWishlist();
+    if(typeof wishListNumber !== undefined) {
+        wishListNumber.textContent = `${currentWishlist.length}`
+        localStorage.setItem('number', wishListNumber.textContent)
+    }
+}
+
+function getWishlistNumber() {
+    const saved = localStorage.getItem('number');
+    return saved
+}
+
+/**
+ * Renders the wishlist items into the wishlistsContainer
+ */
+function renderWishlist() {
+    if (!wishlistsContainer) return;
+
+    const wishlistData = getWishlist();
+    wishlistsContainer.innerHTML = '';
+
+    if (wishlistData.length === 0) {
+        wishlistsContainer.innerHTML = '<p>Your wishlist is empty.</p>';
+        return;
+    }
+
+    wishlistData.forEach((inputs, index) => {
+        wishlistsContainer.innerHTML += `
+            <div class="product">
+                <div class="close-product" onClick="removeFromWishlist(${index})">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="card-top">
+                    <p>${inputs.property}</p>
+                </div>
+                <div class="details">
+                    <span>${inputs.possession}</span>
+                    <p>${inputs.title}</p>
+                    <price>$${inputs.price}</price>
+                    <div class="contains">
+                        <div class="bed">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>${inputs.beds} Beds</span>
+                        </div>
+                        <div class="bath">
+                            <i class="fa-solid fa-bath"></i>
+                            <span>${inputs.baths} Baths</span>
+                        </div>
+                        <div class="house">
+                            <i class="fa-regular fa-house"></i>
+                            <span>${inputs.square} sqft</span>
+                        </div>
+                    </div>
+                    <p>${inputs.description}</p>
+                    <button onClick="detailsView(${index})">View Details & Chat</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+/**
+ * Removes an item from the wishlist specifically
+ */
+function removeFromWishlist(index) {
+    let wishlist = getWishlist();
+    wishlist.splice(index, 1);
+    saveWishlist(wishlist);
+    renderWishlist();
+    if(typeof wishListNumber !== undefined) {
+        wishListNumber.textContent = `${wishlist.length}`
+        localStorage.setItem('number', wishListNumber.textContent)
+    }
+}
+
+// Ensure wishlist renders when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    renderAllProduct();
+    renderWishlist(); 
+    wishListNumber.textContent = getWishlistNumber()
+});
 
 
 // --- Rendering Function (Runs only on the homepage) ---
@@ -117,6 +252,7 @@ function renderAllProduct() {
                     <div class="close-product" onClick="deleteProduct(${index})">
                     <i class="fa-solid fa-xmark"></i>
                     </div>
+                    <i class="fa-regular fa-heart" id="wishlist" onClick="addToWishList(${index})"></i>
                     <div class="card-top">
                         <p>${inputs.property}</p>
                     </div>
@@ -170,6 +306,7 @@ function renderProducts() {
                     <div class="close-product" onClick="deleteProduct(${index})">
                     <i class="fa-solid fa-xmark"></i>
                     </div>
+                    <i class="fa-regular fa-heart" id="wishlist" onClick="addToWishList(${index})"></i>
                     <div class="card-top">
                         <p>${inputs.property}</p>
                     </div>
