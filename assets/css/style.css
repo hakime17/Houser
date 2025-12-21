@@ -6,17 +6,17 @@
 }
 
 body {
-    margin: 10px;
-    padding: 20px;
+    margin: 0px;
+    padding: 0px;
     background: white;
 }
 
 /* Navigation Bar */
 nav {
+    justify-content: space-between;
     width: 100%;
     background: white;
-    padding: 12px 0; 
-    margin-bottom: 40px;
+    padding: 5px; 
 }
 
 nav .navbar {
@@ -36,6 +36,7 @@ nav .navbar {
 nav button{
     padding: 10px;
     margin: 5px;
+    display: flex;
 }
 
 /* Overview Content */
@@ -43,14 +44,14 @@ nav button{
     width: 90%;
     background: white;
     margin: 20px auto;
-    padding: 80px;          /* ★ Updated from 20px → 80px */
+    padding: 50px;          /* ★ Updated from 20px → 80px */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
     font-weight: 600;
-    gap: 10px;
+    gap: 1px;
 }
 
 .overview .p1{
@@ -64,11 +65,13 @@ nav button{
 .overview h1{
     font-size: 45px;
     font-weight: bolder;
+    line-height: 1.05; 
+    margin: 5px 0;
 }
 
 .overview button{
     padding: 10px;
-    margin: 5px;
+    margin-top: 80px;
 }
 
 .features {
@@ -91,7 +94,7 @@ nav button{
 
 .features .card .icon {
   font-size: 32px;     
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .features .card h3 {
@@ -128,6 +131,8 @@ nav button{
 .text-content h1{
     font-size: 2rem;
     margin-bottom: 15px;
+    line-height: 1;
+    margin: 0;
 }
 
 .text-content h5{
@@ -152,9 +157,19 @@ button{
 }
 
 .box{
-    width: 80px;
-    max-width: 600px;
+     width: 80px;
     background: #000;
     padding: 30px;
-    margin: 40px auto;
+    margin: 0; 
+}
+
+
+@media (max-width: 768px) {
+  .features .card {
+    align-items: center;   /* center icon + text */
+    text-align: center;
+  }
+  .features .card .icon{
+    margin: 0 auto 15px;
+  }
 }

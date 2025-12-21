@@ -69,6 +69,47 @@ input{
     border: #000000;
 }
 
+.container .switch{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.switch .option input{
+    display: none;
+}
+
+.box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px;
+    border: 2px solid #000000;
+    background: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover .box{
+    border-color: #000000;
+}
+
+
+.option input:checked + .box{
+    border-color: #000000;
+    background: #ffffff;
+    color: #ffffff;
+}
+
+.icon{
+    color: #ffffff;
+}
+
 
 .btn{
   width: 100%;
