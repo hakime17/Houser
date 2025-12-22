@@ -5,6 +5,8 @@
     font-family: 'Arial', sans-serif;
 }
 
+h
+
 body{
     width: 100vw;
     height: 100vh;
@@ -15,12 +17,13 @@ header{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: rgb(31, 31, 31);
-    color: rgba(255, 255, 255, 0.719);
+    background-color: #000;
+    color: #fff;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 20;
 }
 
 header .contact {
@@ -29,7 +32,7 @@ header .contact {
     gap: 20px;
     padding-inline: 80px;
     padding-block: 10px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.247);
+    border-bottom: 0.5px solid #fff;
 }
 
 header nav{
@@ -43,10 +46,8 @@ header nav{
 
 header nav .logo{
     width: 50px;
-}
-
-header nav .logo img{
-    width: 100%;
+    height: 50px;
+    background: white;
 }
 
 header nav ul{
@@ -57,7 +58,7 @@ header nav ul{
 
 header nav ul li a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.719);
+    color: #fff;
 }
 
 header nav .buttons{
@@ -68,7 +69,6 @@ header nav .buttons{
 header nav .buttons button{
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -80,21 +80,288 @@ header nav i{
     right: 10;
 }
 
+.hero{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero p{
+    font-size: 20px;
+}
+
+.hero h1{
+    font-size: 60px;
+    text-align: center;
+    line-height: 55px;
+    margin-bottom: 20px;
+}
+
+.hero span{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.about{
+    width: 60%;
+    margin-left: auto;
+    margin-block: 30px;
+    padding-inline: 80px;
+}
+
+.about h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.benefits{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-inline: 80px;
+    margin-block: 50px;
+}
+
+.benefits .card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+}
+
+.benefits .card i{
+    font-size: 50px;
+    text-align: center;
+}
+
+.products-container {
+    width: 100%;
+    padding-inline: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-container h4{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+} 
+
+.products-container .products{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.products-container .products .product {
+    background-color: #000;
+    color: #fff;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    border: 0.01px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.products-container .products .product .close-product{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.products-container .products .product .card-top{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.products-container .products .product .details{
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+.products-container .products .product .contains{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.products-container .products .product button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.products-container a{
+    font-size: 20px; 
+    margin-block: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.product-details{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+}
+
+.product-details.active{
+    display: flex;
+}
+
+.product-details .close{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 3rem;
+    height: 3rem;
+    background: black;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-details .product {
+    width: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    border: 0.01px solid #000;
+    overflow: hidden;
+}
+
+.product-details .product .card-top{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.product-details .product .details{
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+.products-details .product .contains{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.products-details .product button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.products-container a{
+    font-size: 20px; 
+    margin-block: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.ready{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ready h5{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ready p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.ready button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
 footer{
     width: 100%;
     padding-block: 20px;
     padding-inline: 80px;
-    background-color: rgb(31, 31, 31);
-    color: rgba(255, 255, 255, 0.719);
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 200px; 
-    /* THE ABOVE MARGIN CAN BE CHANGED  */
 }
 
 footer .footer-links{
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.247);
+    border-bottom: 0.5px solid #fff;
     padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -107,8 +374,10 @@ footer .footer-links .logo-desc{
     width: 400px;
 }
 
-footer .footer-links img{
-    width: 80px;
+footer .footer-links .logo-desc .logo{
+    width: 50px;
+    height: 50px;
+    background: white;
 }
 
 footer .footer-links .links{
@@ -153,17 +422,22 @@ footer .footer-links .links a{
         transition: height 0.5s linear;
     }    
     header nav ul.active{
-        height: 80vh;
+        height: 100vh;
     }
-    header .buttons{
+    header nav .buttons{
         margin-right: 50px;
+        gap: 5px;
     }
     header nav .buttons button{
-        padding: 8px 12px;
+        padding: 5px 10px;
         border: none;
-        border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 12px;
+    }
+    
+    .ready{
+        padding-inline: 10px;
+        text-align: center;
     }
     footer{
         width: 100% !important;

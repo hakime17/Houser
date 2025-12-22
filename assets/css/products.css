@@ -77,6 +77,7 @@ ul li .number{
     right: 0;
 }
 
+
 ul li a{
     text-decoration: none;
     color: white;
@@ -91,7 +92,7 @@ ul li a{
     padding: 20px;
 }
 
-.wishlist-container {
+.products-container {
     width: 100%;
     padding-inline: 80px;
     margin-bottom: 50px;
@@ -101,15 +102,15 @@ ul li a{
     position: relative;
 }
 
-.wishlist-container h4{
-    font-size: 50px;
+.products-container h4{
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
     color: white;
 } 
 
-.wishlist-container .wishlists{
+.products-container .products{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,7 +118,7 @@ ul li a{
 }
 
 
-.wishlist-container .wishlists .product {
+.products-container .products .product {
     background-color: #000;
     color: #fff;
     display: flex; 
@@ -127,7 +128,7 @@ ul li a{
     position: relative;
 }
 
-.wishlist-container .wishlists .product #wishlist{
+.products-container .products .product #wishlist{
     position: absolute;
     top: 10;
     left: 10;
@@ -136,7 +137,7 @@ ul li a{
     font-size: 20px;
 }
 
-.wishlist-container .wishlists .product .close-product{
+.products-container .products .product .close-product{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -151,7 +152,7 @@ ul li a{
     cursor: pointer;
 }
 
-.wishlist-container .wishlists .product .card-top{
+.products-container .products .product .card-top{
     padding: 20px;
     width: 100%;
     height: 200px;
@@ -163,19 +164,19 @@ ul li a{
     font-size: 24px;
 }
 
-.wishlist-container .wishlists .product .details{
+.products-container .products .product .details{
     padding: 20px;
     display: flex; 
     flex-direction: column;
     gap: 15px;
 }
 
-.wishlist-container .wishlists .product .contains{
+.products-container .products .product .contains{
     display: flex;
     justify-content: space-between;
 } 
 
-.wishlist-container .wishlists .product button{
+.products-container .products .product button{
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -184,7 +185,7 @@ ul li a{
     font-weight: bold;
 }
 
-.wishlist-container a{
+.products-container a{
     font-size: 20px; 
     margin-block: 20px;
     color: black;
@@ -253,12 +254,12 @@ ul li a{
     gap: 15px;
 }
 
-.wishlists-details .product .contains{
+.products-details .product .contains{
     display: flex;
     justify-content: space-between;
 } 
 
-.wishlists-details .product button{
+.products-details .product button{
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -267,7 +268,7 @@ ul li a{
     font-weight: bold;
 }
 
-.wishlist-container a{
+.products-container a{
     font-size: 20px; 
     margin-block: 20px;
     color: black;

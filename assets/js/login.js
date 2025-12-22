@@ -7,7 +7,7 @@ const loginform = document.getElementById("loginform");
 signuptab.addEventListener("click", () => {
   signupform.classList.remove("hidden");
   loginform.classList.add("hidden");
-
+  console.log('this is it')
   signuptab.classList.add("active");
   logintab.classList.remove("active");
 });

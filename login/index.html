@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign up</title>
+    <link rel="stylesheet" href="/assets/login/signup.css">
+    <script src="https://kit.fontawesome.com/c5f30d34e5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" id="signuptab">Sign Up</button>
+            <button class="tab" id="logintab">Log In</button>
+        </div>
+
+        <form class="form" id="signupform">
+            <h2>Sign Up for Free</h2>
+
+            <input type="text" placeholder="First Name*" required>
+            <input type="text" placeholder="Last Name*" required>
+            <input type="email" placeholder="Email Address*" required>
+            <input type="text" placeholder="Set A Password*" required>
+
+
+            <div class="switch">
+
+                <label class="option">
+                    <input type="radio" name="role" value="landlord" checked>
+                    <span class="box">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span>Landlord</span>
+                    </span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="role" value="tenant">
+                    <span class="box">
+                        <span class="icon">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                        <span>Tenant</span>
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <button class="btn">GET STARTED</button>
+        </form>
+
+        <form class="form hidden" id="loginform">
+            <h2>Welcome Back!</h2>
+
+            <input type="email" placeholder="Email Address*" required>
+            <input type="text" placeholder="Password*" required>
+
+            <a href="#">Forgot Password</a>
+            <a href="/assets/home/index.html">
+                <button class="btn">LOG IN</button>
+            </a>
+        </form>
+    </div>
+
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>

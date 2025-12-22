@@ -1,82 +1,11 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/home.css">
-</head>
-<body>
-    <header>
-        <div class="details">
-            <div class="contact">
-                <span>Call us: +123 456 7890</span>
-                <span>Email: info@houser.com</span>
-                <span>Location: 123 Main St, Anytown</span>
-            </div>
-        </div>
-        <nav>
-            <div class="logo">
-            </div>
-            <ul>
-                <li><a href="/assets/home/index.html">Home</a></li>
-                <li><a href="/assets/about/index.html">About</a></li>
-                <li><a href="/assets/products/index.html">Products</a></li>
-                <li><a href="/assets/wishlist/index.html">Wishlist</a></li>
-                <li><a href="/assets/contact/index.html">Contact & Support</a></li>
-            </ul>
-            <div class="buttons">
-                <button>Make your choice</button>
-                <button>Signout</button>
-                <a href="/assets/addproduct/index.html">
-                    <button>Add Product</button>
-                </a>
-            </div>
-            <i class="fa-solid fa-bars" id="mobile-toggle"></i>
-        </nav>
-    </header>
-    
-    <footer>
-        <div class="footer-links">
-            <div class="logo-desc">
-                <img src="/assets/images/logo.png" />
-                <p>The agentless way to find or sell your home. Empowering buyers with direct access and zero commission fees.</p>
-            </div>
-            <div class="links">
-                <span class="head">Quick Links</span>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Products</a>
-                <a href="#">Wishlist</a>
-            </div>
-            <div class="links">
-                <span class="head">Support & Company</span>
-                <a href="#">Contact & Support</a>
-                <a href="#">FAQ</a>
-                <a href="#">Terms of Services</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-            <div class="links">
-                <span class="head">Get In Touch</span>
-                <a href="#">Call us: +234 0000000000</a>
-                <a href="#">Email: info@houser.com</a>
-                <a href="#">Location: 123 Main St. Anytown</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2024 Houser. All rights reserved.</span>
-    </footer>
-</body>
-</html>
-
-
-CSS 
-
 *{
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+
+h
 
 body{
     width: 100vw;
@@ -116,10 +45,8 @@ header nav{
 
 header nav .logo{
     width: 50px;
-}
-
-header nav .logo img{
-    width: 100%;
+    height: 50px;
+    background: white;
 }
 
 header nav ul{
@@ -141,7 +68,6 @@ header nav .buttons{
 header nav .buttons button{
     padding: 10px 20px;
     border: none;
-    : 5px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -164,6 +90,57 @@ footer{
     gap: 20px;
     margin-top: 200px; 
     /* THE ABOVE MARGIN CAN BE CHANGED  */
+}
+
+.container {
+    margin-top: 200px;
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 80px;
+}
+
+.container .houser{
+    margin-bottom: 20px;
+}
+
+.container .form-container {
+    width: 100%;
+}
+
+.container .form-container .head{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container .form-container form>*{
+    flex-shrink: 0;
+    width: 40%;
+    flex-grow: 1;
+}
+
+.container .form-container form label input, select, textarea, button{
+    width: 100%;
+    padding: 10px;
+}
+
+.container .form-container form .property-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .form-container form .property-details .flex-input{
+    display: flex;
+    gap: 20px;
 }
 
 footer .footer-links{
@@ -215,7 +192,7 @@ footer .footer-links .links a{
     header nav ul{
         position: absolute;
         left: 0;
-        top: 68;
+        top: 70px;
         flex-direction: column;
         background-color: rgb(31, 31, 31);
         width: 100%; 
@@ -226,18 +203,49 @@ footer .footer-links .links a{
         transition: height 0.5s linear;
     }    
     header nav ul.active{
-        height: 80vh;
+        height: 90vh;
     }
-    header .buttons{
+    header nav .buttons{
         margin-right: 50px;
+        gap: 5px;
     }
     header nav .buttons button{
-        padding: 8px 12px;
+        padding: 5px 10px;
         border: none;
-        : 5px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 12px;
     }
+
+    .container {
+        padding-inline: 20px;
+    }
+
+    .container .form-container .head{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container .form-container .head h2{
+        font-size: 20px;
+    }
+
+    .container .form-container .head p{
+        font-size: 12px;
+    }
+
+    .container .form-container form{
+        gap: 10px;
+    }
+
+    .container .form-container form>*{
+        width: 100%;
+    }
+
+    .container .form-container form .property-details .flex-input{
+        display: flex;
+        gap: 10px;
+    }
+
     footer{
         width: 100% !important;
         padding-inline: 10px;

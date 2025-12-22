@@ -2,10 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/home.css">
-    <script src="https://kit.fontawesome.com/4b902564ce.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/script.js" defer></script>
+    <title>contact us page</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/contact.css">
+    <script src="https://kit.fontawesome.com/16dbe04921.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -18,29 +17,49 @@
         </div>
         <nav>
             <div class="logo">
-                <img src="/assets/images/logo.png" />
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Wishlist</a></li>
-                <li><a href="#">Contact & Support</a></li>
+                <li><a href="/assets/home/index.html">Home</a></li>
+                <li><a href="/assets/about/index.html">About</a></li>
+                <li><a href="/assets/products/index.html">Products</a></li>
+                <li><a href="/assets/wishlist/index.html">Wishlist</a></li>
+                <li><a href="/assets/contact/index.html">Contact & Support</a></li>
             </ul>
             <div class="buttons">
                 <button>Make your choice</button>
                 <button>Signout</button>
+                <a href="/assets/addproduct/index.html">
+                    <button>Add Product</button>
+                </a>
             </div>
             <i class="fa-solid fa-bars" id="mobile-toggle"></i>
         </nav>
     </header>
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p>we're here to help you navigate your agentless home home journey</p>
 
-<!-- THIS IS WHERE YOU WILL START BUILDING, DON'T DELE -->
+       <h1>Send Us a Message</h1> 
+        <form>
+            <p>Full Name</p>
+            <input type="text" placeholder="Your Name">
+            <p>Email Address</p>
+            <input type="email" placeholder="Your Email">
+            <p>Subject</p>
+            <input type="subject" placeholder="Question about a listing" >
+            <p>Your Message</p>
+            <textarea class="Message" placeholder="i would like to know more about property ID #500..."></textarea>
+            <button type="submit">Send Message</button>
+        </form>  
 
+        <div class="cat" >
+        <h1>Our Details</h1>
+        </div>
+    </div> 
     <footer>
         <div class="footer-links">
             <div class="logo-desc">
-                <img src="/assets/images/logo.png" />
+                <div class="logo"></div>
                 <p>The agentless way to find or sell your home. Empowering buyers with direct access and zero commission fees.</p>
             </div>
             <div class="links">
